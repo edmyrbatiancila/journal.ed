@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Journal App</title>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.14.0/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.14.0/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+    <main>
+        <header>
+            <span>My Journal</span>
+        </header>
+        <section id="days">
+            <form id="form-journal" method="post">
+                <div class="date_data">
+                    <label for="date">Please input date:</label>
+                    <input id="date" name="datePicker" type="text" value="mm/dd/yyyy" />
+                </div>
+                <div class="btn_submit">
+                    <input id="submit-btn" type="submit" value="Start"/>
+                </div>
+            </form>
+        </section>
+        <section id="journal-accordion"></section>
+    </main>
+    <div id="entryModal" title="Add Journal Entry" style="display: none;">
+        <form id="journal-entry">
+            <div class="title_data">
+                <label for="title">Title:</label>
+                <input id="title" name="title" type="text" />
+                <label for="content">How was your day?</label>
+                <textarea name="content" id="content" rows="20" cols="10"></textarea>
+            </div>
+        </form>
+    </div>
+    <div id="dialog">
+        <p class="content"></p>
+    </div>
+</body>
+</html>
